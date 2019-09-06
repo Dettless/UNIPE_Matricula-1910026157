@@ -15,7 +15,10 @@ int main(){
 
   printf("O numero informado foi %d", numero);  
 
+return 0;
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 //Questão 3
 
@@ -32,7 +35,10 @@ int main(){
 
   printf("Sua media eh: %f", z);
 
+return 0;
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 //Questão 4
 
@@ -53,9 +59,58 @@ int main(){
       q = x;
 
     x++;
+    
   }
 
   printf("Dia da maior venda: %d\n", q);
   printf("Maior venda: %d", z);
 
+return 0;
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+//Questão 5
+
+#include <stdio.h>
+
+int main(){
+  float x;
+
+  printf("Digite o valor do raio: ");
+  scanf("%f", &x);
+
+  x = 2 * 3.14159 * x;
+
+  printf("Circunferencia: %f", x);
+
+  return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+//Questão 6
+
+#include <stdio.h>
+
+int main(){
+  int x1, x2, x3, x4, mult, soma;
+
+  printf("Digite 4 numeros inteiros:\n");
+  
+  scanf("%d", &x1);
+  scanf("%d", &x2);
+  scanf("%d", &x3);
+  scanf("%d", &x4);
+
+  mult = x1 * x3;
+  soma = x2 + x4;
+
+  printf("Multiplicação do primero pelo terceiro: %d", mult);
+  printf("\nSoma do segundo com o quarto: %d", soma);
+
+  return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
