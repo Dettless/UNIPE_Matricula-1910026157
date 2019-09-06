@@ -114,3 +114,83 @@ int main(){
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+//Questão 7
+
+#include <stdio.h>
+
+int main(){
+  int A=0, B=0, D=0, z=1, s=0, nul=0, bra=0, p=0;
+
+  printf("-Eleição 2019-\nCandidatos: A, B e D");
+  
+  printf("\n Digite 1 para votar em A \n Digite 2 para votar em B \n Digite 3 para votar em D");
+  
+  printf("\n Digite 4 para votar nulo \n Digite 5 para votar em branco");
+
+  printf("\n Digite 0 para encerrar a votação");
+  
+  printf("\n-------------------------------------------------------------");
+
+  while(z > 0){
+    
+    printf("\nSeu voto: ");
+    scanf("%d", &s);
+
+    switch(s){
+      case 1:
+      A++;
+      p++;
+      break;
+
+      case 2:
+      B++;
+      p++;
+      break;
+
+      case 3:
+      D++;
+      p++;
+      break;
+
+      case 4:
+      nul++;
+      p++;
+      break;
+
+      case 5:
+      bra++;
+      p++;
+      break;
+
+      case 0:
+      z = 0;
+      break;
+      
+      default:
+      printf("\nNumero invalido!\n");
+    }
+  
+  
+  }
+  
+  printf("\n-------------------------------------------------------------");
+
+  printf("\nFIM DA ELEIÇÃO!");
+
+  printf("\nQuantidade de eleitores: %d", p);
+  
+  printf("\nVotos no candidato A: %d", A);
+  
+  printf("\nVotos no candidato B: %d", B);
+  
+  printf("\nVotos no candidato D: %d", D);
+  
+  printf("\nVotos nulos: %d", nul);
+  
+  printf("\nVotos em branco: %d", bra);
+  
+  return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
