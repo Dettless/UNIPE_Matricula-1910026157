@@ -1,0 +1,61 @@
+LABORATÓRIO DE DESENVOLVIMENTO DE ALGORITMOS
+Instrutor: WALACE SARTORI BONFIM
+Aluno: João Vinícius Belo Barbosa // Matrícula: 1910026157
+   
+//Questão 2, código devidamente corrigido
+
+#include <stdio.h>
+
+int main(){
+  int numero = 0;
+
+  printf("Informe o valor de um numero: ");
+
+  scanf("%d", &numero);
+
+  printf("O numero informado foi %d", numero);  
+
+}
+
+//Questão 3
+
+#include <stdio.h>
+
+int main(){
+  float x, y, z;
+
+  printf("Digite suas duas notas:\n");
+  scanf("%f", &x);
+  scanf("%f", &y);
+
+  z = (x + y)/2;
+
+  printf("Sua media eh: %f", z);
+
+}
+
+//Questão 4
+
+#include <stdio.h>
+
+int main(){
+  int x=1, y=0, z=0, q=0;
+  
+  printf("Registre aqui as venas de fevereiro de 2019:\n");
+
+  while(x <= 28){
+    printf("Dia %d: ", x);
+    scanf("%d", &y);
+
+    if(y > z)
+      z = y;
+    if(z == y)
+      q = x;
+
+    x++;
+  }
+
+  printf("Dia da maior venda: %d\n", q);
+  printf("Maior venda: %d", z);
+
+}
