@@ -194,3 +194,32 @@ int main(){
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+//Questão 8
+
+#include <stdio.h>
+
+int main(){
+  float pre;
+  int med;
+
+  printf("Digite o preço atual do produto: ");
+  scanf("%f", &pre);
+
+  printf("Digite o numero da venda media mensal: ");
+  scanf("%d", &med);
+
+  if (pre < 30 && med < 500)
+    pre = pre * 1.1;
+  
+  else if ((pre >= 30 && pre < 80) && (med >= 500 && med < 1200))
+    pre = pre * 1.15;
+
+  else if (pre >= 80 && med >= 1200)
+    pre = pre * 0.8;
+  
+  
+  printf("novo preço: %f", pre);
+  
+  return 0;
+
+}
