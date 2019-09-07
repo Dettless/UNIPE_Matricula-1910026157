@@ -1,1 +1,39 @@
+//Q1
+#include <stdio.h>
 
+int main() {
+  int x=1, y;
+
+  while(x != 0){
+    
+    printf("Digite um numero entre 1 e 9: ");
+    scanf("%d", &y);
+
+    switch(y){
+      case 1:
+      printf("1");
+      break;
+
+      case 2:
+      printf("2");
+      break;
+
+      case 3:
+      printf("3");
+      break;
+
+      case 0:
+      printf("xau!");
+      x=0;
+      break;
+
+      default:
+      printf("numero invalido!");
+
+    }
+
+  }
+
+  return 0;
+
+}
