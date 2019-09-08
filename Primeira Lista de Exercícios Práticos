@@ -1,10 +1,15 @@
+/* TÉCNICAS DE DESENVOLVIMENTO DE ALGORITMOS
+   Aluno: João Vinícius Belo Barbosa
+   Matrícula: 1910026157 */
+
 #include <stdio.h>
 #include <math.h>
 
+//Definindo variáveis globais para serem usadas nas funções a seguir.
 int a1, a2, a3, media;
 float N1, N2, MED, R;
 
-void verifica() //Questão 2
+void verifica() //Função da Questão 2
 {
   printf("Digite um numero para saber se ele eh par ou impar: ");
   scanf("%d", &a1);
@@ -17,7 +22,7 @@ void verifica() //Questão 2
 
 }
 
-void potencia() //Questão 3
+void potencia() //Função da Questão 3
 {
   printf("Digite um numero base para potencializar: ");
   scanf("%f", &N1);
@@ -31,7 +36,7 @@ void potencia() //Questão 3
 
 }
 
-void raiz() //Questão 4
+void raiz() //Função da Questão 4
 {
   printf("Digite um numero para raiz: ");
   scanf("%f", &N1);
@@ -45,7 +50,7 @@ void raiz() //Questão 4
 
 }
 
-void bissexto() //Questão 5
+void bissexto() //Função da Questão 5
 {
   printf("Digite o ano para saber se ele eh bissexto ou nao: ");
   scanf("%d", &a1);
@@ -59,7 +64,7 @@ void bissexto() //Questão 5
 
 }
 
-void media_ponderada() //Questão 6
+void media_ponderada() //Função da Questão 6
 {
   printf("Digite 3 notas (de 0 a 100) para calcular sua media ponderada:\n");
   scanf("%d %d %d", &a1, &a2, &a3);
@@ -75,7 +80,7 @@ void media_ponderada() //Questão 6
 
 }
 
-void verifica_media() //Questão 7
+void verifica_media() //Função da Questão 7
 {
   printf("Digite suas duas notas:\n");
   scanf("%f %f", &N1, &N2);
@@ -88,7 +93,7 @@ void verifica_media() //Questão 7
 
 }
 
-void matricula() //Questão 8
+void matricula() //Função da Questão 8
 {
   printf("Meu nome: Joao Vinicius Belo Barbosa\n");
 
@@ -98,10 +103,12 @@ void matricula() //Questão 8
 
 }
 
+//Função principal do programa em C
 int main() {
-  int x=1, y;
+  int x=1, y; //Variáveis para serem usadas apenas no main
 
-  while(x != 0){ //Questão 1
+//Criando o menu da questão 1, onde as funções das outras questões serão chamadas
+  while(x != 0){
 
     printf("Digite um numero entre 1 e 9: ");
     scanf("%d", &y);
@@ -158,3 +165,4 @@ int main() {
   return 0;
 
 }
+//Fim do Exercício
