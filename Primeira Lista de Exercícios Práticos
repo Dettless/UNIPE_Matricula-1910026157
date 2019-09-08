@@ -22,18 +22,26 @@ void potencia() //Questão 3
   printf("Digite um numero base para potencializar: ");
   scanf("%f", &N1);
 
-  printf("\nDigite o expoente da potencializacao: ");
+  printf("Digite o expoente da potencializacao: ");
   scanf("%d", &a1);
 
   R = pow(N1, a1);
 
-  printf("Resultado em forma cientifica: %.1f\n", R); //ATENÇÃO!!!
+  printf("Resultado em forma cientifica: %.2e\n", R);
 
 }
 
 void raiz() //Questão 4
 {
-  printf("Digite")
+  printf("Digite um numero para raiz: ");
+  scanf("%f", &N1);
+
+  printf("Digite o tipo da raiz: ");
+  scanf("%d", &a1);
+
+  R = pow(N1, 1.0/a1);
+
+  printf("Resultado em forma cientifica: %.2e\n", R);
 
 }
 
