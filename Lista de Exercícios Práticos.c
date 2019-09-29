@@ -42,7 +42,7 @@ void raiz() //Função da Questão 4
 {
   printf("\nDigite o tipo da raiz: ");
   scanf("%d", &a1);
-  
+
   printf("Digite um numero para raiz: ");
   scanf("%f", &N1);
 
@@ -169,6 +169,119 @@ void fatorial() //Função da Questão 1 (lista 2)
 
 }
 
+//Funções da terceira lista (string)
+
+void contar_caracter() //Questão 1 - lista 3
+{
+  char s[20];
+  int x=0;
+
+  printf("\nDigite um texto: ");
+  getchar();
+  scanf("%[^\n]s",s);
+
+  while(s[x] != '\0'){
+    x++;
+  }
+
+  printf("Quantidade de caracteres: %d\n\n",x);
+}
+
+void contar_vogais() //Questão 2 - lista 3
+{
+  char s[20];
+  int x=0, y=0;
+
+  printf("\nDigite um texto: ");
+  getchar();
+  scanf("%[^\n]s",s);
+
+  for(;s[x] != '\0';x++){
+    if (s[x] == 'a' || s[x] == 'e' || s[x] == 'i' || s[x] == 'o' || s[x] == 'u')
+      y++;
+
+
+  }
+
+  printf("Quantidade de vogais: %d\n\n",y);
+}
+
+void comparar_textos() //Questão 3 - lista 3
+{
+  char s1[20], s2[20];
+  int x=0, y=0;
+
+  printf("\nDigite dois textos para comparação:\n");
+  
+  printf("Texto 1: ");
+  getchar();
+  scanf("%[^\n]s",s1);
+  
+  printf("Texto 2: ");
+  getchar();
+  scanf("%[^\n]s",s2);
+
+  while(s1[x] != '\0' && s2[x] != '\0') {
+    if(s1[x] != s2[x]) {
+      y = 1;
+      break; 
+      }
+    
+    x++;
+  }
+
+  if(y == 0 && s1[x] == '\0' && s2[x] == '\0')
+    printf("Textos iguais!\n\n");
+  else
+    printf("Textos diferentes!\n\n");
+}
+
+void copiar_texto() //Questão 4 - lista 3
+{
+  char s1[20], s2[20];
+  int x=0;
+
+  printf("\nDigite um texto para ser copiado\n");
+
+  printf("Digite o texto dentro da variavel s1: ");
+  getchar();
+  scanf("%[^\n]s",s1);
+
+  while(s1[x] != '\0') {
+    s2[x] = s1[x];
+    x++;
+  }
+
+  s2[x] = '\0';
+
+  printf("Copia do texto s1 na variavel s2: %s\n\n",s2);
+}
+
+void concatenar_textos() //Questão 5 - lista 3
+{
+  char s1[20], s2[20];
+  int x=0, y=0;
+  
+  printf("\nDigite o primeiro texto: ");
+  getchar();
+  scanf("%[^\n]s",s1);
+  
+  printf("Digite o segundo texto: ");
+  getchar();
+  scanf("%[^\n]u",s2);
+
+  for(; s1[x] != '\0'; x++) {}
+
+  for(; s2[y] != '\0'; y++) {
+    s1[x] = s2[y];
+    x++;
+  }
+
+  s1[x] = '\0';
+  
+  printf("Textos concatenados: %s\n\n",s1);
+}
+
 //Função principal do programa em C
 int main() {
   int x=1, y; //Variáveis para serem usadas apenas no main
@@ -176,7 +289,7 @@ int main() {
 //Criando o menu da questão 1 (lista 1), onde as funções das outras questões serão chamadas
   while(x != 0){
 
-    printf( 
+    printf(
             "MENU\n\n"
             "Digite 1  para verificar se algum numero eh par ou impar\n"
             "Digite 2  para potenciacao\n"
@@ -187,9 +300,14 @@ int main() {
             "Digite 7  para calcular o fatorial\n"
             "Digite 8  para verificar se um numero eh primo\n"
             "Digite 9  para imprimir a sequencia de fibonacci\n"
-            "Digite 10 para exibir meu nome e minha matricula em hexadecimal\n\n"
+            "Digite 10 para exibir meu nome e minha matricula em hexadecimal\n"
+            "Digite 11 para contar os caracteres de um texto\n"
+            "Digite 12 para contar as vogais de um texto\n"
+            "Digite 13 para comparar dois textos\n"
+            "Digite 14 para copiar um texto\n"
+            "Digite 15 para concatenacao de textos\n\n"
           );
-    
+
     scanf("%d", &y);
 
     switch(y){
@@ -231,6 +349,26 @@ int main() {
 
       case 10:
       matricula();
+      break;
+
+      case 11:
+      contar_caracter();
+      break;
+
+      case 12:
+      contar_vogais();
+      break;
+
+      case 13:
+      comparar_textos();
+      break;
+
+      case 14:
+      copiar_texto();
+      break;
+
+      case 15:
+      concatenar_textos();
       break;
 
       case 0:
